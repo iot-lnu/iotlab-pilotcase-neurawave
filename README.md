@@ -1,5 +1,6 @@
 # iotlab-pilotcase-neurawave
-[File](#File)
+[Software](#Software)
+[Hardware](#Hardware)
 
 
 
@@ -11,4 +12,5 @@
 
 
 
-# File
+# Software
+# Hardware
