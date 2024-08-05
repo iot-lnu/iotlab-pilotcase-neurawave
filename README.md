@@ -76,7 +76,7 @@ In this projects we used several electronic equipement :
 | Amplifier       | LMN324N       | In this project we use an amplifier to amplify the signal receive by the DAC. We have done this to have a signal which corresponds at the specifications. |
 ## Schematic
 
-![alt text]( image\Schematic_diagram.png)
+![alt text]( image/Schematic_diagram.png)
 
 First of all, we have our microcontroller which generates the signal and send the values to the DAC. After that, we have the DAC which converts the values sent by the ESP32 into a voltage. Then, the lowpass filter filter the signal to have a smoother one and finally the signal is amplify by going into the amplifier.  
 
@@ -84,6 +84,6 @@ First of all, we have our microcontroller which generates the signal and send th
 
 The first thing we have done was to observe what kind of signal there was in competing products. So after oserving on oscilloscope we saw that type of signal : 
 
-![alt text]( image\competing_signal.jpeg)
+![alt text]( image/competing_signal.jpeg)
 
 So the goal was to recreate that signal with the ESP32 : 
