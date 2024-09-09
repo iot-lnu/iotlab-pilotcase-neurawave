@@ -9,8 +9,10 @@ Neurawave is a company based in Kalmar, Sweden. They provides solution for migra
   - [How it works](#how-it-works)
 - [Hardware](#hardware)
   - [Equipment used](#equipment-used)
-  - [Schematic](#schematic)
+- [Schematic](#schematic)
 - [Results](#results)
+- [Video](#video)
+  
 
 # Software
 ## IDE used 
@@ -69,21 +71,60 @@ Then in the void loop we have a for loop to read all the values there are in the
 ## Equipment used 
 In this projects we used several electronic equipement : 
 
-| Equipment       | Reference     | Function |
-| ---- | ---- | ---- |
-| Microcontroller | Xiao esp32 c3 | The microcontroller have the mission of creating the signal and send datas to the DAC |
-| DAC | AD5693 boards | This component is a Digital to Analogic Convert 16 bits it will convert numeric datas send by the ESP 32 to a voltage. It communicate in I2C with the microcontroller|
-| Amplifier       | LMN324N       | In this project we use an amplifier to amplify the signal receive by the DAC. We have done this to have a signal which corresponds at the specifications. |
-## Schematic
+| Equipment |Component Image | Reference     | Function |
+| ---- | ---- | ---- | ---- |
+| Breadbord|  <img src="image/breadboard.png" width="100" height="50">|[Breadboard](https://www.electrokit.com/en/kopplingsdack-840-anslutningar)| It is used for prototyping our circuits
+|Jumper wires |<img src="image/jumper_wires.png" width="100" height="50">|[Jumper Wires](https://www.electrokit.com/en/labbsladd-40-pin-30cm-hane/hane)| Their are used for connecting the components on the breadboard
+| Microcontroller |<img src="image/esp32.png" width="50" height="50">| [Xiao esp32 c3 ](https://hitechchain.se/en/startsida/seeed-studio-xiao-esp32c3) | The microcontroller have the mission of creating the signal and send datas to the DAC |
+| DAC |<img src="image/DAC.png" width="70" height="50">|   [AD5693 boards ](https://www.electrokit.com/en/ad56933r-16-bit-dac-i2c)| This component is a Digital to Analogic Convert 16 bits it will convert numeric datas send by the ESP 32 to a voltage. It communicate in I2C with the microcontroller|
+| Amplifier| <img src="image/amplifier.png" width="100" height="100">|  [LMN324N ](https://www.mouser.se/ProductDetail/STMicroelectronics/LM324N?qs=%252BX2uje6VeKXntA8jWYY6ig%3D%3D)| In this project we use an amplifier to amplify the signal receive by the DAC. We have done this to have a signal which corresponds at the specifications. |
+|Resistor (15 Ohms, 1 kOhms, 3.9 kOhms)| <img src="image/resistor.png" width="100" height="100">  |  [Resistors ](https://www.electrokit.com/en/search.php?keyword=resistor&search=) | The resistors will allows us to build a filter and amplify our signal
+|Capacitors 3.3 µF |<img src="image/capacitor.png" width="60" height="60">  | [Capacitor ](https://www.electrokit.com/en/kondensator-3.3uf-100v-22.5mm) | Capacitor will allows us to build a filter
+|DC-DC Step up| <img header = "stepup" src="image/stepup.png" width="100" height="90">| [DC-DC converter step-up ](https://www.electrokit.com/en/dc-dc-omvandlare-step-up-4.5-35v-3a) |This step up voltage allows us to supply the amplifier with a + 15 volt from the 5 V of our microcontroller (-15 volt is provide from a laboratory power supply ) 
 
-![alt text]( image/Schematic_diagram.png)
+
+# Schematic
+<p align="center">
+  <img width="1000" height="400" src="image/Schematic_diagram.png">
+</p>
+
 
 First of all, we have our microcontroller which generates the signal and send the values to the DAC. After that, we have the DAC which converts the values sent by the ESP32 into a voltage. Then, the lowpass filter filter the signal to have a smoother one and finally the signal is amplify by going into the amplifier.  
+
+- Breadboard schematic : 
+  
+<p align="center">
+  <img width="600" height="800" src="image/neurawave_breadboard.png">
+</p>
+
 
 # Results
 
 The first thing we have done was to observe what kind of signal there was in competing products. So after oserving on oscilloscope we saw that type of signal : 
 
-![alt text]( image/competing_signal.jpeg)
+<p align="center">
+  <img width="1000" height="700" src="image/competing_signal.jpeg">
+</p>
 
-So the goal was to recreate that signal with the ESP32 : 
+So the goal was to recreate that signal with the ESP32. 
+
+This is the result we got : 
+
+- Signal at 30 Hz 
+
+<p align="center">
+  <img width="1000" height="700" src="image/oscillo30Hz.BMP">
+</p>
+
+- Signal at 50 Hz 
+  
+<p align="center">
+  <img width="1000" height="700" src="image/oscillo50Hz.BMP">
+</p>
+
+
+# Video
+
+In this video you can see all the electronic assembly on the breadboard and the result we have on the osciloscope.
+
+[![Watch the video](image/video_miniature.svg)](video/neurawave_pilot_case_video.mp4)
