@@ -100,7 +100,7 @@ First of all, we have our microcontroller which generates the signal and send th
 
 # Results
 
-The first thing we have done was to observe what kind of signal there was in competing products. So after oserving on oscilloscope we saw that type of signal : 
+Our first thing to do was to identify how relief signals might look with standard treatment setups and how we could measure. So after oserving on oscilloscope we saw that type of signal :
 
 <p align="center">
   <img width="1000" height="700" src="image/competing_signal.jpeg">
