@@ -85,7 +85,7 @@ In this projects we used several electronic equipement :
 
 # Schematic
 <p align="center">
-  <img width="1000" height="400" src="image/Schematic_diagram.png">
+  <img style="width:50%;" src="image/Schematic_diagram.png">
 </p>
 
 
@@ -94,7 +94,7 @@ First of all, we have our microcontroller which generates the signal and send th
 - Breadboard schematic : 
   
 <p align="center">
-  <img width="600" height="800" src="image/neurawave_breadboard.png">
+  <img style="width:50%;" src="image/neurawave_breadboard.png">
 </p>
 
 
@@ -103,7 +103,7 @@ First of all, we have our microcontroller which generates the signal and send th
 Our first thing to do was to identify how relief signals might look with standard treatment setups and how we could measure. So after observing on oscilloscope we saw that type of signal :
 
 <p align="center">
-  <img width="1000" height="700" src="image/competing_signal.jpeg">
+  <img style="width:50%;" src="image/competing_signal.jpeg">
 </p>
 
 So the goal was to recreate that signal with the ESP32. 
@@ -113,18 +113,28 @@ This is the result we got :
 - Signal at 30 Hz 
 
 <p align="center">
-  <img width="1000" height="700" src="image/oscillo30Hz.BMP">
+  <img style="width:50%;" src="image/oscillo30Hz.BMP">
 </p>
 
 - Signal at 50 Hz 
   
 <p align="center">
-  <img width="1000" height="700" src="image/oscillo50Hz.BMP">
+  <img style="width:50%;" src="image/oscillo50Hz.BMP">
 </p>
 
 
-# Video
+# Videos
 
-In this video you can see all the electronic assembly on the breadboard and the result we have on the osciloscope.
+# Dev board prototype 
 
-[![Watch the video](image/video_miniature.svg)](video/neurawave_pilot_case_video.mp4)
+In this video, you can see all the electronic assembly on the breadboard and the result we have on the oscilloscope.
+
+<a href="https://youtu.be/YIq_XReVOZs">
+  <img src="image/video_miniature.svg" alt="Watch the video" style="width:50%;">
+</a>
+
+# Interview with Neurawave about their experience during the project (in Swedish) 
+
+<a href="https://youtu.be/lceQeNddavU">
+  <img src="image/neurawave-video2.webp" alt="Watch the video" style="width:50%;">
+</a>
